@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<script>
+
+    setInterval("check_payment()",3000);
+
+    function check_payment()
+
+    {
+
+
+
+        var url = 'http://www.sgyxmall.com/index.php?s=api/Default/orderVerify';
+
+        $.get(url, {'dingdan':'43524332399093'}, function(result){
+alert(result);
+            if(result=='1'){
+
+                self.location="/wap/index.html#/_myOrder";
+
+            }else{
+                self.location="/index.php";
+            }
+        });
+
+    }
+
+</script>
+<body>
+dsfs
+</body>
+</html>
